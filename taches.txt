@@ -1,0 +1,16 @@
+modéliser BDD -- OK
+maquette site -- Ok
+connecter site à la BDD -- OK
+permettre la lecture d'un fichier audio
+afficher une liste d'album et de playlist
+créer une barre lecture avec des bouton et une barre de progression
+configurer les boutons de la barre de lecture
+permettre la lecture d'un fichier audio depuis la BDD
+afficher l'album/playlist en cours d'écoute() à gauche du main avec tous les titres et l'image de la musique en bas
+mettre un style différent pour la musique en cours d'écoute
+configurer les différents boutons de la barre de lecture (mode aléatoire, en boucle, play/pause, skip,précédent)
+configurer la barre de progression qui avance en fonction de l'avancée de la musique
+permettre à l'utilisateur de bouger le curseur de la barre de progression, ce qui va changer l'endroit de la musique
+faire un fondu dans les 5 dernières secondes d'écoute
+faire un affichage simple mais très beau 
+rendre le site complètement responsive

@@ -8,6 +8,10 @@
     </aside>
     <section>
         <div class="search"></div>
-        <article class="music"></article>
+        <article class="music">
+            <?php
+                include('./process/promptAlbum.php')
+            ?>
+        </article>
     </section>
 </main>
