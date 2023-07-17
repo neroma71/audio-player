@@ -6,8 +6,23 @@
             </ul>
         </nav>
     </aside>
-    <section>
+    <section class="container">
         <div class="search"></div>
-        <article class="music"></article>
+        <article class="album">
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+        </article>
+        <article class="playlist">
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+            <div class="block">toto</div>
+        </article>
     </section>
 </main>
