@@ -5,15 +5,13 @@
     $albums = $req->fetchALL();
 ?>
 <main>
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="#"></a></li>
-            </ul>
-        </nav>
-    </aside>
     <section class="container">
-        <div class="search"></div>
+        <div class="search">
+            <form action="../process/recherche.php" method="get" id="monform">
+                <input type="search" name="terme" id="rechercher">
+                <input type="submit" name="s" value="Rechercher">
+            </form>
+        </div>
         <article class="album">
             <?php
                 foreach($albums as $album){

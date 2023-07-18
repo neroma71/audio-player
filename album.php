@@ -8,6 +8,11 @@ $req->bindValue(":id_album", $id_album, PDO::PARAM_INT);
 $req->execute();
 $albums = $req->fetchAll();
 
+$req = $db->prepare('SELECT * FROM musique INNER JOIN album ON album.idAlbum = musique.idAlbum WHERE album.idAlbum = :id_album');
+$req->bindValue(":id_album", $id_album, PDO::PARAM_INT);
+$req->execute();
+$musics = $req->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +23,7 @@ $albums = $req->fetchAll();
     <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
-    <section class="container">
+    <section class="album">
             <?php
                 foreach($albums as $album){
                 echo "<div class='block'>
@@ -28,6 +33,16 @@ $albums = $req->fetchAll();
                 echo "</div>";
                 }
              ?>
+     </section>
+     <section class="songs">
+        <?php
+        foreach($musics as $music){
+            echo "<div class='blocksong'>
+            <img src='icon/play.svg'>
+            ".$music['nom_musique'].
+            "</div>";
+        }
+        ?>
      </section>
 
 </body>

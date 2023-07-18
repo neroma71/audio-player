@@ -1,5 +1,5 @@
 <?php
-  require('../utlis/connexion.php');
+  require('../utils/connexion.php');
   
   if(isset($_GET["s"]) AND $_GET["s"] == "Rechercher"){
     $_GET["terme"] = htmlspecialchars($_GET["terme"]);
@@ -10,7 +10,7 @@
     if(isset($terme)){
         $terme = strtolower($terme);
 
-        $select_terme = $db->prepare("SELECT nom_musique, artiste FROM musique WHERE nom_musqiue LIKE ? OR artiste LIKE ? UNION SELECT nom_album FROM album WHERE nom_album LIKE ? ");  
+        $select_terme = $db->prepare("SELECT * FROM album WHERE nom_album LIKE ? OR artiste LIKE ?");  
         $select_terme->execute(array("%".$terme."%", "%".$terme."%"));
     }else{
         echo "Vous devez rentrer votre recherche dans la barre de recherche";
@@ -22,14 +22,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recherche</title>
+    <link rel="stylesheet" href="../css/recherche.css">
 </head>
 <body>
+  <section>
   <?php
     while($terme_trouve = $select_terme->fetch()){
-        echo "<p>prenom : ".$terme_trouve['firstname']." nom :".$terme_trouve['lastname']."</p>";
+        echo "<article class='link'><a href='../album.php?id_album=".$terme_trouve['idAlbum']."'>
+        Album : ".$terme_trouve['nom_album']." / artiste : ".$terme_trouve['artiste']."
+        <img src=../uploads/".$terme_trouve['pochette'].">
+        </a></article>";
     }
     $select_terme->closeCursor();
   ?>
+  </section>
 </body>
 </html>
