@@ -14,7 +14,7 @@ song.onloadedmetadata = function(){
 
 
 play.addEventListener("click",()=>{
-    let source = '<source src="/songs/' + listSong[0] + '"type="audio/mp3"></source>';
+    let source = '<source src="/songs/' + listSong[index] + '"type="audio/mp3"></source>';
     song.innerHTML = source;
     song.play();
 })
@@ -35,13 +35,23 @@ song.addEventListener("timeupdate", ()=>{
     //song.play();
     progress.value = song.currentTime;
     if(song.currentTime == song.duration){
+        if(index+1 == listSong.length){
+            index=0;
+        }else{
+            index++;
+        }
         nextsong();
     }
 })
 
 function nextsong(){
+    if(index+1== listSong.length){
+        index=0;
+    }else{
+        index++;
+    }
     song.firstChild.remove();
-    let source = '<source src="/songs/' + listSong[1] + '"type="audio/mp3"></source>';
+    let source = '<source src="/songs/' + listSong[index] + '"type="audio/mp3"></source>';
     console.log(source);
     song.innerHTML = source;
     song.load();
