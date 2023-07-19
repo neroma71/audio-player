@@ -13,5 +13,8 @@
                 include('./process/promptAlbum.php')
             ?>
         </article>
+        <div id="oui">
+
+        </div>
     </section>
 </main>
