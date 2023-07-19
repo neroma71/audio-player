@@ -7,7 +7,7 @@ body{
     min-height:100vh;
     width:100vw;
     overflow-x:hidden;
-    background:rgb(63, 63, 63);
+    background:rgb(41, 41, 41);
 }
 .block{
     position:relative;
@@ -51,7 +51,11 @@ p{
     justify-content:space-around;
     align-items: center;
     border:1px solid white;
+    border-radius:10px;
 }
 .blocksong img{
     margin-top:10px;
+}
+.blocksong:hover{
+    background:rgb(54, 54, 54);
 }
