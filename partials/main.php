@@ -25,12 +25,13 @@
             ?>
         </article>
         <article class="playlist">
-            <div class="block">toto</div>
-            <div class="block">toto</div>
-            <div class="block">toto</div>
-            <div class="block">toto</div>
-            <div class="block">toto</div>
-            <div class="block">toto</div>
+            <?php require('liste_playlist.php'); 
+            
+        foreach($playlists as $playlist){
+            echo"<a href=''><div class='block'><img src='uploads/".$playlist['avatar']."'><p>".$playlist['nom_playlist']."</p> </a></div>";
+        }
+    ?>
+           
         </article>
     </section>
     <?php require_once('footer_accueil.php'); ?>

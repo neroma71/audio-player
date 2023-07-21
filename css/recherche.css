@@ -10,6 +10,9 @@ body{
     overflow-x:hidden;
     background:rgb(41, 41, 41);
 }
+h1{
+    color:white;
+}
 section{
     width:100vw;
     margin:100px 0;
