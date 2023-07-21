@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
 *{
     box-sizing:border-box;
-    font-family:Helvetica, sans-serif; 
+    font-family: 'Source Code Pro';
 }
 body{
     margin:0;
@@ -9,6 +10,7 @@ body{
     width:100vw;
     overflow-x:hidden;
     background:rgb(41, 41, 41);
+
 }
 .menu{
     position:fixed;
@@ -165,4 +167,10 @@ footer{
 }
 label{
     color:white;
+}
+.title{
+    color:white;
+    font-weight: 1000;
+
+    align-items: center;
 }

@@ -14,7 +14,7 @@
             </form>
         </div>
        <?php include("menu.php"); ?>
-        <h1>spotywich</h1>
+        <h1>SpotiWish</h1>
         <article class="album">
             <?php
                 foreach($albums as $album){

@@ -61,7 +61,7 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
                 ?>
             </section>
         </div>
-        <footer></footer>
+        <footer><?php include('partials/footer.php') ?></footer>
     </main>
     <script src="js/menu.js"></script>
 </body>
