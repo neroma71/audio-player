@@ -1,5 +1,9 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
+
 *{
     box-sizing:border-box;
+    
 }
 body{
     margin:0 auto;
@@ -8,6 +12,7 @@ body{
     width:100vw;
     overflow-x:hidden;
     background:rgb(41, 41, 41);
+    font-family: 'Source Code Pro';
 }
 main{
     min-height:100vh;
@@ -82,6 +87,7 @@ main{
     width:40px;
     background:url(../images/spotiwish.jpg)center no-repeat;
     background-size:contain;
+    cursor:pointer;
 }
 #monform{
     margin-right:50px;
@@ -228,13 +234,13 @@ input[type=range] {
   }
   input[type=range]::-ms-fill-lower {
     background: #205928;
-    border: 3px solid #18D501;
+    border: 3px solid #b5e51d;
     border-radius: 8px;
 
   }
   input[type=range]::-ms-fill-upper {
     background: #205928;
-    border: 3px solid #18D501;
+    border: 3px solid #b5e51d;
     border-radius: 8px;
 
   }
@@ -254,14 +260,6 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #205928;
   }
-svg{
-    padding: 3px;
-    background-color: black;
-    cursor:pointer;
-    fill: aliceblue;
-    object-fit: cover;
-    border-radius: 15px;
-}
 
 .lecteur{
     display: flex;
@@ -280,16 +278,45 @@ svg{
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    margin-top:20px;
 }
 
 .selected{
-    color:green;
-    border-color: green;
-    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    color:#b5e51d;
+    border-color: #b5e51d;
+    box-shadow: 1px 1px 10px #b5e51d;
 }
 footer{
     height:20vh;
     width:100vw;
     margin-top:0;
     background:rgb(0, 0, 0);
+}
+
+.sidebutton{
+    background-color: black;
+    cursor:pointer;
+    fill: aliceblue;
+}
+
+.middlebutton{
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: white;
+    padding:2px;
+    display: flex;
+    margin: auto;
+    cursor:pointer;
+}
+.sidebutton:hover{
+    fill: #b5e51d;
+}
+audio{
+    margin-top: 20px;
+}
+#titre{
+    color:white;
+}
+#songDuration{
+    color:white;
 }
