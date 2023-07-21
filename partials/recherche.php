@@ -26,7 +26,15 @@
     <link rel="stylesheet" href="../css/recherche.css">
 </head>
 <body>
-  <section>
+<div class="search">
+            <div class="logo"></div>
+            <form action="recherche.php" method="get" id="monform">
+                <input type="search" name="terme" id="rechercher">
+                <input type="submit" name="s" value="Rechercher">
+            </form>
+        </div>
+        <?php include("menu.php");?>
+  <section> 
   <?php
     while($terme_trouve = $select_terme->fetch()){
         echo "<article class='link'><a href='../album.php?id_album=".$terme_trouve['idAlbum']."'>
@@ -37,5 +45,6 @@
     $select_terme->closeCursor();
   ?>
   </section>
+  <script src="../js/menu.js"></script>
 </body>
 </html>
