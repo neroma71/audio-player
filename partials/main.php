@@ -7,11 +7,14 @@
 <main>
     <section class="container">
         <div class="search">
-            <form action="../process/recherche.php" method="get" id="monform">
+            <div class="logo"></div>
+            <form action="../partials/recherche.php" method="get" id="monform">
                 <input type="search" name="terme" id="rechercher">
                 <input type="submit" name="s" value="Rechercher">
             </form>
         </div>
+       <?php include("menu.php"); ?>
+        <h1>spotywich</h1>
         <article class="album">
             <?php
                 foreach($albums as $album){
@@ -30,5 +33,5 @@
             <div class="block">toto</div>
         </article>
     </section>
-    <footer>fsdf</footer>
+    <?php require_once('footer_accueil.php'); ?>
 </main>
