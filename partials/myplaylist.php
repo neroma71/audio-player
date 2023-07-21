@@ -3,7 +3,7 @@ session_start();
 require('../utils/connexion.php');
 $idplay = (int)$_GET['idplay'];
 
-$req = $db->prepare('SELECT * FROM playlist_musique INNER JOIN playlist ON playlist.idPlaylist = playlist_musique.idPlaylist WHERE playlist_musique.idMusique = :idplay');
+$req = $db->prepare('SELECT * FROM playlist_musique INNER JOIN musique ON musique.idMusique = playlist_musique.idMusique INNER JOIN playlist ON playlist_musique.idPlaylist = playlist.idPlaylist INNER JOIN album ON musique.idAlbum = album.idAlbum WHERE playlist_musique.idPlaylist = :idplay');
 $req->bindValue(":idplay", $idplay, PDO::PARAM_INT);
 $req->execute();
 $playlists = $req->fetchAll();
@@ -22,9 +22,8 @@ $playlists = $req->fetchAll();
 $index=0;
                 foreach ($playlists as $playlist) {
                     echo "<div id='$index' class='blocksong'>
-                    <img src='icon/play.svg'>
-                    <img src='icon/play.svg'>
-                    ".$playlist['nom_musique']."</div>";
+                    <img src='../icon/play.svg'>
+                    ".$playlist['nom_musique']." <img class='imgliste'src='../uploads/".$playlist['pochette']."'></div>";
                         $index++;
                 }
                 ?>

@@ -340,3 +340,9 @@ footer{
     top:10px;
     color:white;
 }
+.imgliste{
+    position:relative;
+    height:50px;
+    width:50px;
+    top:-5px;
+}
