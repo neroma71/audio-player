@@ -1,0 +1,203 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0 auto;
+    padding:0;
+    min-height:100vh;
+    width:100vw;
+    overflow-x:hidden;
+    background:rgb(41, 41, 41);
+}
+.block{
+    position:relative;
+    width:300px;
+    top:50px;
+    left:calc(50% - 150px);
+    text-align:center;
+    overflow:hidden;
+
+}
+.block img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+
+}
+h4{
+    position:relative;
+    color:white;
+    margin:0;
+    padding:0;
+    font-size:25px;
+    z-index:100;
+}
+p{
+    position:relative;
+    color:white;
+    margin:0;
+    padding:0;
+    font-size:17px;
+    z-index:100;
+}
+.songs{
+    width:100vw;
+    margin-top:150px;
+}
+.blocksong{
+    height:50px;
+    width:50vw;
+    margin:25px 25vw;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    border:1px solid white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.blocksong img{
+    margin-top:10px;
+}
+.blocksong:hover{
+    background:rgb(54, 54, 54);
+}
+
+/*************AUDIO BAR ***********/
+.hidden{
+    display: none;
+}
+.display{
+    display: flex;
+}
+#time{
+    color:white;
+}
+input[type=range] {
+    height: 35px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 75%;
+    border-radius: 15px;
+    background-color: transparent;
+    margin: 5px;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+
+    background: #205928;
+    border-radius: 4px;
+    border: 3px solid #18D501;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 3px 3px 10px #00AA00;
+    border: 3px solid #83E584;
+    height: 23px;
+    width: 22px;
+    border-radius: 22px;
+    background: #059C0F;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -12px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #205928;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+
+    background: #205928;
+    border-radius: 4px;
+    border: 3px solid #18D501;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 3px 3px 10px #00AA00;
+    border: 3px solid #83E584;
+    height: 23px;
+    width: 22px;
+    border-radius: 22px;
+    background: #059C0F;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #205928;
+    border: 3px solid #18D501;
+    border-radius: 8px;
+
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #205928;
+    border: 3px solid #18D501;
+    border-radius: 8px;
+
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 3px 3px 10px #00AA00;
+    border: 3px solid #83E584;
+    height: 23px;
+    width: 22px;
+    border-radius: 22px;
+    background: #059C0F;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #205928;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #205928;
+  }
+svg{
+    padding: 3px;
+    background-color: black;
+    cursor:pointer;
+    fill: aliceblue;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.lecteur{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+}
+.lecteur>*{
+    margin: 10px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.progressBar{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+.selected{
+    color:green;
+    border-color: green;
+}
