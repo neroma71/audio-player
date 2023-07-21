@@ -21,6 +21,7 @@ $playlists = $req->fetchAll();
 <?php
 $index=0;
                 foreach ($playlists as $playlist) {
+                   echo "<h1>Liste de". $playlist['nom_playlist']. "</h1>";
                     echo "<div id='$index' class='blocksong'>
                     <img src='../icon/play.svg'>
                     ".$playlist['nom_musique']." <img class='imgliste'src='../uploads/".$playlist['pochette']."'></div>";
