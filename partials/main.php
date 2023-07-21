@@ -28,7 +28,7 @@
             <?php require('liste_playlist.php'); 
             
         foreach($playlists as $playlist){
-            echo"<a href=''><div class='block'><img src='uploads/".$playlist['avatar']."'><p>".$playlist['nom_playlist']."</p> </a></div>";
+            echo"<a href='partials/myplaylist.php?idplay=".$playlist['idPlaylist']."'><div class='block'><img src='uploads/".$playlist['avatar']."'><p>".$playlist['nom_playlist']."</p> </a></div>";
         }
     ?>
            

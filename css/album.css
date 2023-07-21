@@ -292,31 +292,51 @@ footer{
     margin-top:0;
     background:rgb(0, 0, 0);
 }
-
 .sidebutton{
     background-color: black;
     cursor:pointer;
     fill: aliceblue;
 }
-
+#playicon{
+    position:relative;
+    height:40px;
+    width:40px;
+    top:-5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid white;
+    border-radius:100%;
+}
+#playicon:hover{
+    box-shadow: 1px 1px 25px #b5e51d;
+}
 .middlebutton{
-    object-fit: contain;
-    border-radius: 15px;
-    background-color: white;
-    padding:2px;
-    display: flex;
-    margin: auto;
+    object-fit:contain;
     cursor:pointer;
+    margin-left:3px;
+    background:black;
+}
+.middlebutton:hover{
+    fill: #b5e51d;
 }
 .sidebutton:hover{
     fill: #b5e51d;
 }
-audio{
-    margin-top: 20px;
-}
 #titre{
-    color:white;
+    position:relative;
+    width:100%;
+    top:10px;
+     text-align:center;
+     color:white;
 }
 #songDuration{
+    position:relative;
+    top:10px;
+    color:white;
+}
+#time{
+    position:relative;
+    top:10px;
     color:white;
 }
