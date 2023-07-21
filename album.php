@@ -51,17 +51,22 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
             <section class="songs">
                 <?php
                 $index = 0;
-                foreach($musics as $music){
+                foreach($musics as $music){ 
                     echo "<div id='$index' class='blocksong'>
                     <img src='icon/play.svg'>
                     ".$music['nom_musique'].
-                    "</div>";
+                    "<form method='post' action='process/playlist.php'>
+                    <input type='hidden' name='idmusic' value='".$music['idMusique']."' />
+                            <input type='submit' name='liste' value='ajouter à la playlist' />
+                        </form></div>";
                     $index++;
                 }
                 ?>
             </section>
         </div>
-        <footer></footer>
+        <footer>
+            <?php include('partials/footer.php'); ?>
+        </footer>
     </main>
     <script src="js/menu.js"></script>
 </body>
