@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="../css/audio.css">
 </head>
 <body>
+<div class="search">
+        <div class="logo"></div>
+        <form action="../partials/recherche.php" method="get" id="monform">
+            <input type="search" name="terme" id="rechercher">
+            <input type="submit" name="s" value="Rechercher">
+        </form>
+    </div>
+    <?php include("menu2.php"); ?>
     <div class="upload">
     <form method="post" action="../process/traitement_playlist.php" enctype="multipart/form-data">
 <p class="title_form">ajout playlist</p>
@@ -17,5 +25,6 @@
         <input type="submit" value="envoyer">
 </form>
 </div>
+<script src="../js/menu.js"></script>
 </body>
 </html>
