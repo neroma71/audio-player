@@ -70,7 +70,6 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
                 }
                 include('process/playlist.php')
                 ?>
-
             </section>
         </div>
         <footer><?php include('partials/footer.php') ?></footer>
