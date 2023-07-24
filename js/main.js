@@ -64,8 +64,10 @@ progress.addEventListener("input", ()=>{
 
 song.addEventListener("timeupdate", ()=>{
     progress.value = song.currentTime;
+    timemax();
     if(song.currentTime == song.duration){
         asyncCall();
+
         nextsong();
     }
 })

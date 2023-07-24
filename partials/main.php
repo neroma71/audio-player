@@ -15,6 +15,8 @@
         </div>
        <?php include("menu.php"); ?>
         <h1>SpotiWish</h1>
+        <h3>Albums</h3>
+        <hr>
         <article class="album">
             <?php
                 foreach($albums as $album){
@@ -24,6 +26,8 @@
                 }
             ?>
         </article>
+        <h3>Playlists</h3>
+        <hr>
         <article class="playlist">
             <?php require('liste_playlist.php'); 
             
