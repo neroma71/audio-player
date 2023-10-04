@@ -28,7 +28,7 @@
                 "pseudo" => $pseudo,
                 "email" => $_POST["email"]
             ];
-            header("location: admin.php");
+            header("location: ./admin.php");
         }else{
             die("le formulaire est incomplet");
         }

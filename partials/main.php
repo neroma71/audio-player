@@ -8,7 +8,7 @@
     <section class="container">
         <div class="search">
             <div class="logo"></div>
-            <form action="../partials/recherche.php" method="get" id="monform">
+            <form action="./partials/recherche.php" method="get" id="monform">
                 <input type="search" name="terme" id="rechercher">
                 <input type="submit" name="s" value="Rechercher">
             </form>
@@ -32,7 +32,7 @@
             <?php require('liste_playlist.php'); 
             
         foreach($playlists as $playlist){
-            echo"<a href='partials/myplaylist.php?idplay=".$playlist['idPlaylist']."'><div class='block'><img src='uploads/".$playlist['avatar']."'><p>".$playlist['nom_playlist']."</p> </a></div>";
+            echo"<a href='./partials/myplaylist.php?idplay=".$playlist['idPlaylist']."'><div class='block'><img src='./uploads/".$playlist['avatar']."'><p>".$playlist['nom_playlist']."</p> </a></div>";
         }
     ?>
            

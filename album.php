@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('utils/connexion.php');
+require('./utils/connexion.php');
 $id_album = (int)$_GET['id_album'];
 $req = $db->prepare('SELECT * FROM album  WHERE idAlbum = :id_album');
 
@@ -23,13 +23,13 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album</title>
-    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="./css/album.css">
 </head>
 
 <body>
     <div class="search">
         <div class="logo"></div>
-        <form action="../partials/recherche.php" method="get" id="monform">
+        <form action="./partials/recherche.php" method="get" id="monform">
             <input type="search" name="terme" id="rechercher">
             <input type="submit" name="s" value="Rechercher">
         </form>
@@ -50,7 +50,7 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
             </section>
             <section class="songs">
                 <?php
-                include('partials/liste_playlist.php');
+                include('./partials/liste_playlist.php');
                 $index = 0;
                 foreach($musics as $music){ 
                     echo "<div id='$index' class='blocksong'>
@@ -68,13 +68,13 @@ $_SESSION['idAlbum'] = $_GET['id_album'];
                         </form></div>";
                     $index++;
                 }
-                include('process/playlist.php')
+                include('./process/playlist.php')
                 ?>
             </section>
         </div>
-        <footer><?php include('partials/footer.php') ?></footer>
+        <footer><?php include('./partials/footer.php') ?></footer>
     </main>
-    <script src="js/menu.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

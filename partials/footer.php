@@ -1,5 +1,4 @@
 
-
 <footer >
     
     <audio id="song">
@@ -23,7 +22,7 @@
     
 
 </footer>
-    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="./js/main.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </body>
 

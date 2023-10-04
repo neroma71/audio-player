@@ -90,7 +90,7 @@ function timesong(){
 }
 
 function playsong(){
-    let source = '<source src="/songs/' + listSong[id] + '"type="audio/mp3"></source>';
+    let source = '<source src="./songs/' + listSong[id] + '"type="audio/mp3"></source>';
     song.innerHTML = source;
     song.load();
     song.play();
@@ -103,7 +103,7 @@ function nextsong(){
         }else{
             id++;
         }
-        let source = '<source src="/songs/' + listSong[id] + '"type="audio/mp3"></source>';
+        let source = '<source src="./songs/' + listSong[id] + '"type="audio/mp3"></source>';
         playing = document.getElementById(id);
         playing.classList.add('selected');
         song.innerHTML = source;
@@ -119,7 +119,7 @@ function previoussong(){
         id--;
     }
     song.firstChild.remove();
-    let source = '<source src="/songs/' + listSong[id] + '"type="audio/mp3"></source>';
+    let source = '<source src="./songs/' + listSong[id] + '"type="audio/mp3"></source>';
     playing = document.getElementById(id);
     playing.classList.add('selected');
     song.innerHTML = source;
@@ -131,7 +131,7 @@ function previoussong(){
 
 async function songFromServer() {
     try {
-        const response = await fetch('/process/listsongs.php');
+        const response = await fetch('./process/listsongs.php');
         const data = await response.text();
 
         listSong = data.split(' ');

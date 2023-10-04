@@ -14,6 +14,7 @@ session_start();
     <link rel="stylesheet" href="../css/audio.css">
 </head>
 <body>
+    
     <div class="upload">
 <form method="post" action="../process/upload.php" enctype="multipart/form-data">
 <p class="title_form">upload album</p>
@@ -24,7 +25,7 @@ session_start();
         <input type="file" name="pochette"><br /><br />
         <input type="submit" value="envoyer">
 </form>
-<p>toto</p>
+
 <form method="post" action="../process/uploadmp3.php" enctype="multipart/form-data">
 <p class="title_form">upload music</p>
         <label for="titre">titre de l'album</label><br />
